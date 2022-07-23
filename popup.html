@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InCrypt: Password Guard </title>
+        
+        
+    </head>
+    <body>
+        <script src="popup.js" ></script>
+        
+    <style>
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color:#B3B3DF;
+            font-size: 12px;
+        
+        }
+        @font-face {
+            font-family: Futura;
+            src: url(futura\ medium\ bt.ttf);
+        }
+        body {
+            background-color:#161635;
+            color:aliceblue;
+        }
+        .horizontal{
+            position: relative;
+            display: inline-block;
+            
+        }
+        
+        
+        .Brand{
+            text-align: center; 
+        }
+        
+    </style>
+    
+    <div id="Brand">
+        <img src="logo.png" style="width:50px; height:50px" class="center" >
+
+        <h1 style="font-family:'Futura' ; 
+        color:white; font-size: 20px; 
+        font-weight: normal;
+        margin-top:-40px;
+        margin-bottom: 35px;
+        padding-left: 50px; 
+        padding-right: 50px;
+        
+        float: inline"
+        >InCrypt</h1>
+
+    </div>
+    
+        <h2 style="font-family:'Segoe UI'; 
+        font-size: 13px; 
+        font-weight:bold;
+        margin-left: 15px; 
+        color:#B3B3DF; 
+        margin-bottom: 3px;">Enter MasterKey</h2>
+
+        <input type="text" id="MasterKey" placeholder="Password (6-18 chars)" style="background-color:#2C2B69;
+        margin-left: 10px;
+        margin-right: 10px;
+        width:250px; 
+        border-radius: 10px;
+        border-color: #42419E;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        padding: 10px;
+        font-family: 'Segoe UI'; 
+        color:#B3B3DF" >
+    <br>
+        
+        
+    
+    <button id="Generate Custom"  
+     
+    style="font-family:'Segoe UI';
+    font-size:13px; 
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 79px; 
+    padding-right:79px; 
+    margin-left:12px; 
+    margin-bottom:15px; 
+    margin-top: 5px; 
+    border-radius: 10px; 
+    background-color:#080808; 
+    color: white;">Generate Password</button>
+
+    
+        <h1 id="display_pass" style="font-family:'Segoe UI'; 
+        font-size: 10px;
+        font-weight: lighter; 
+        padding:10px;
+        width:250px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px; 
+        color:white; 
+        background-color:#161635 ;
+        border-style: dashed; 
+        border-width: 2px;
+        border-radius: 10px;">
+        <div id="horizontal">
+        Generated Password</h1>
+        <button id="copyTextBtn"  ; style="background-color: black; 
+            color:white; 
+            font-family: 'Segoe UI';
+            border-radius: 10px; 
+            margin-left:13px;
+            margin-right: 13px;
+            margin-bottom: 20px;
+            margin-top: -15px;
+            display: inline;
+            width: 55px;
+            padding:5px ;
+            transform: translate(0,-122%);
+            float: right;
+            
+            
+            " >Copy</button>
+            
+        </div>
+            <input type="text" value="Hello World" id="myInput" style="display:none">
+            
+            <!-- <script >
+                var hash=0;
+    
+    function generate(){
+        var initial=document.getElementById("enteredurl").value;
+        var master = "Lakshya@123";
+        hash=String(stringToHash(initial.concat(master)));
+        document.getElementById("display_pass").innerHTML=initial;
+        
+        return 1;
+    }
+
+    function stringToHash(string) {
+            
+        hash = 0;
+        
+        if (string.length == 0) return hash;
+        
+        for (i = 0; i < string.length; i++) {
+            char = string.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        
+        return hash;
+    }
+
+    function copy_to_clipboard(){
+        document.getElementById("myInput").value=document.getElementById("display_pass").innerHTML;;
+        var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+        
+      
+
+    </script>
+             -->
+        
+    </body>
+</html>
